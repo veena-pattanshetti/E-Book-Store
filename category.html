@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Categories</title>
+    
+    <!-- SweetAlert2 Library -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+        /* Background styling */
+        body {
+            background: linear-gradient(to right, #2c221b, #444);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        /* Page title */
+        .logo {
+            font-size: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Category container */
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Category cards */
+        .category-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        /* Category button */
+        .btn-category {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+            margin-top: 10px;
+        }
+
+        .btn-category:hover {
+            background-color: #e64a19;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo">Buy Your Book</div>
+    <h2>Explore Our Book Categories</h2>
+
+    <div class="categories">
+        <div class="category-card">
+            <h3>Fiction</h3>
+            <button class="btn-category" onclick="buyBook('Fiction')">Buy</button>
+        </div>
+        <div class="category-card">
+            <h3>Science</h3>
+            <button class="btn-category" onclick="buyBook('Science')">Buy</button>
+        </div>
+        <div class="category-card">
+            <h3>Self-Help</h3>
+            <button class="btn-category" onclick="buyBook('Self-Help')">Buy</button>
+        </div>
+        <div class="category-card">
+            <h3>Technology</h3>
+            <button class="btn-category" onclick="buyBook('Technology')">Buy</button>
+        </div>
+        <div class="category-card">
+            <h3>Business</h3>
+            <button class="btn-category" onclick="buyBook('Business')">Buy</button>
+        </div>
+        <div class="category-card">
+            <h3>Biographies</h3>
+            <button class="btn-category" onclick="buyBook('Biographies')">Buy</button>
+        </div>
+        <div class="category-card">
+            <h3>Historical</h3>
+            <button class="btn-category" onclick="buyBook('Historical')">Buy</button>
+        </div>
+        <div class="category-card">
+            <h3>Mathematics</h3>
+            <button class="btn-category" onclick="buyBook('Mathematics')">Buy</button>
+        </div>
+        <div class="category-card">
+            <h3>Statistics</h3>
+            <button class="btn-category" onclick="buyBook('Statistics')">Buy</button>
+        </div>
+        <div class="category-card">
+            <h3>Java</h3>
+            <button class="btn-category" onclick="buyBook('Java')">Buy</button>
+        </div>
+        <div class="category-card">
+            <h3>C++</h3>
+            <button class="btn-category" onclick="buyBook('C++')">Buy</button>
+        </div>
+        <div class="category-card">
+            <h3>Python</h3>
+            <button class="btn-category" onclick="buyBook('Python')">Buy</button>
+        </div>
+    </div>
+
+    <script>
+        function buyBook(category) {
+            Swal.fire({
+                title: "Purchase Successful!",
+                text: "You have successfully bought a book from " + category + " category.",
+                icon: "success",
+                confirmButtonText: "OK"
+            });
+        }
+    </script>
+
+</body>
+</html>
